@@ -788,3 +788,14 @@ section.needs-confirm { outline-offset: -6px; }
   .nav-link, .nav-toggle { padding: 0 0.6rem; font-size: 1rem; }
   .header-phone-label { display: none; }
 }
+
+/* Medicare GUIDE offer card on the homepage. */
+.bento-med { background: var(--plum); color: var(--surface); }
+.bento-med h3 { color: var(--surface); }
+.bento-med p { color: var(--on-plum-soft); }
+.bento-med .deal-price { color: var(--mint); }
+.bento-med .deal-price span { color: var(--on-plum-soft); }
+.bento-med .offer-tag { background: var(--mint); color: var(--plum); }
+.bento-med .bento-link { color: var(--mint); }
+@media (min-width: 720px) { .bento-med { grid-column: span 6; } }
+@media (min-width: 1024px) { .bento-va { grid-column: span 4; } .bento-med { grid-column: span 2; } }
