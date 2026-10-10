@@ -803,3 +803,17 @@ section.needs-confirm { outline-offset: -6px; }
 /* The big number on offer cards keeps its display size (the card's paragraph rule was shrinking it). */
 .bento-card p.deal-price { font-size: clamp(3rem, 2rem + 3vw, 4.25rem); }
 .bento-card p.deal-price span { font-size: 1rem; }
+
+/* Ways to pay, simplified: two feature cards, insurance as one wide strip, the rest as a single line. */
+@media (min-width: 720px) { .bento .bento-ins { grid-column: span 6; } }
+@media (min-width: 900px) {
+  .bento-ins .bento-body { display: grid; grid-template-columns: minmax(15rem, 1fr) minmax(0, 2fr) auto; align-items: center; column-gap: 2rem; row-gap: 0.5rem; padding-block: 1.5rem; }
+  .bento-ins .offer-tag { grid-column: 1 / -1; justify-self: start; }
+  .bento-ins .bento-link { margin-top: 0; padding-top: 0; white-space: nowrap; }
+}
+.pay-more { margin-top: 1.25rem; font-size: 1.0625rem; color: var(--ink-soft); }
+.pay-more span { display: block; }
+.pay-more span + span { margin-top: 0.375rem; }
+.pay-more a { color: var(--plum); font-weight: 700; text-underline-offset: 0.2em; }
+@media (min-width: 900px) { .pay-more span { display: inline; } .pay-more span + span { margin-left: 0.5rem; } }
+@media (max-width: 719px) { .pay-more a { display: inline-block; padding-block: 0.375rem; } }
